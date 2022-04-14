@@ -11,7 +11,7 @@ sql = 'Select * from cars c;'
 #convert returned data into a dataframe
 record = pd.DataFrame(postgreconnect.runquery(sql))
 #Add column header - 9 columns
-record.column=['Name','Miles_Per_Gallon','Cylinders','Displacement','Horsespeed','Weight_In_Lbs','Acceleration','Year','Origin']
+record.columns=['Name','Miles_Per_Gallon','Cylinders','Displacement','Horsespeed','Weight_In_Lbs','Acceleration','Year','Origin']
 #Add title to streamlit app
 st.title('Cars data - Sourced from Heroku')
 #The contents were printed on a table
